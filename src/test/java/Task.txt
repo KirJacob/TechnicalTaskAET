@@ -1,0 +1,28 @@
+You need to create automation tests for Twitter public API.
+
+Check basic operations:
+
+1. GET
+https://dev.twitter.com/rest/reference/get/statuses/home_timeline
+Fields to verify
+- created_at
+- retweet_count
+- text
+
+2. POST
+https://dev.twitter.com/rest/reference/post/statuses/destroy/id
+- Verify that status was really removed
+
+3. POST
+https://dev.twitter.com/rest/reference/post/statuses/update
+Fields to verify
+- text (check that text can be updated)
+Additional:
+- Check that tweet duplication causes 403 error
+
+4. Create functional tests based on API tests which will verify corresponding Twitter Web UI.
+Tests should be written using Java + Selenium WebDriver
+
+
+//able to run on multiple environments
+//better ui tests architecture
